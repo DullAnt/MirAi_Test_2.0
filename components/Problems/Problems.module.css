@@ -1,0 +1,90 @@
+.problems {
+    padding: 100px 0;
+    color: var(--text-primary);
+}
+
+.problemsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.problemCard {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    color: var(--text-primary);
+    backdrop-filter: blur(15px);
+}
+
+.problemCard.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.problemCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-light);
+}
+
+.problemCard h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+    display: flex;
+    align-items: center;
+}
+
+.problemIcon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.problemSubtitle {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.problemCard ul {
+    list-style-type: none;
+}
+
+.problemCard li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+    color: var(--text-secondary);
+}
+
+.problemCard li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.problemTitle {
+    color: var(--text-primary);
+}
+
+.problemDescription {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .problems {
+        padding: 80px 0;
+    }
+
+    .problemsGrid {
+        grid-template-columns: 1fr;
+    }
+}

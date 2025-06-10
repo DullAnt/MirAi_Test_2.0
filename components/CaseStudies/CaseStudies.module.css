@@ -1,0 +1,115 @@
+.caseStudies {
+    padding: 100px 0;
+    color: var(--text-primary);
+}
+
+.caseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.caseCard {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    color: var(--text-primary);
+    backdrop-filter: blur(15px);
+}
+
+.caseCard.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.caseCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-light);
+}
+
+.caseHeader {
+    background: linear-gradient(135deg, var(--darker), var(--primary));
+    color: white;
+    padding: 20px 30px;
+}
+
+.caseHeader h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.caseHeader h4 {
+    font-size: 16px;
+    opacity: 0.8;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.caseBody {
+    padding: 30px;
+}
+
+.caseBody h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.caseBody ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.caseBody li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    color: var(--text-secondary);
+}
+
+.caseBody li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-light);
+    font-weight: bold;
+}
+
+.results {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.results li:before {
+    color: var(--success);
+}
+
+@media (max-width: 768px) {
+    .caseStudies {
+        padding: 80px 0;
+    }
+
+    .caseGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.caseStudyCard {
+    color: var(--text-primary);
+}
+
+.caseStudyTitle {
+    color: var(--text-primary);
+}
+
+.caseStudyDescription {
+    color: var(--text-secondary);
+}

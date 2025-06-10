@@ -1,0 +1,38 @@
+.scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4361EE, #4CC9F0);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+    z-index: 999;
+}
+
+.scrollToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scrollToTop:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.icon {
+    transition: transform 0.3s ease;
+}
+
+.scrollToTop:hover .icon {
+    transform: translateY(-3px);
+}

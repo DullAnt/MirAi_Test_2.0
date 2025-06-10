@@ -1,0 +1,236 @@
+.pricing {
+    padding: 100px 0;
+    color: var(--text-primary);
+}
+
+.pricingHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pricingHeader h2 {
+    font-size: 36px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pricingHeader p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.pricingCard {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    text-align: center;
+    position: relative;
+    color: var(--text-primary);
+    backdrop-filter: blur(15px);
+}
+
+.pricingCard.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pricingCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary-light);
+}
+
+.pricingCard.popular {
+    border: 2px solid var(--primary);
+}
+
+.pricingCard.popular:before {
+    content: 'Популярный';
+    position: absolute;
+    top: -12px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.pricingCard h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.price span {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-left: 5px;
+    color: var(--text-secondary);
+}
+
+.pricingCard ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.pricingCard li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.pricingCard li:before {
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
+}
+
+.pricingCard .btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2);
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pricingCard .btn:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+    box-shadow: 0 15px 25px rgba(67, 97, 238, 0.3);
+    transform: translateY(-3px);
+}
+
+.pricingModel {
+    max-width: 800px;
+    margin: 40px auto 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    backdrop-filter: blur(15px);
+}
+
+.pricingModel h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.pricingModel ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.pricingModel li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 35px;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.pricingModel li:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(67, 97, 238, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-light);
+    font-weight: bold;
+}
+
+.pricingNote {
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.pricingTitle {
+    color: var(--text-primary);
+}
+
+.pricingDescription {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .pricingGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricingModel ul {
+        grid-template-columns: 1fr;
+    }
+
+    .pricingHeader h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing {
+        padding: 80px 0;
+    }
+
+    .pricingHeader h2 {
+        font-size: 28px;
+    }
+
+    .pricingHeader p {
+        font-size: 16px;
+    }
+
+    .pricingCard {
+        padding: 30px 20px;
+    }
+
+    .price {
+        font-size: 36px;
+    }
+}
